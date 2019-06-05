@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba2.MainPage"
+             BackgroundImageSource="javeriana1.png">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="30">
+            <Image Source="logojave2.png" WidthRequest="200" HeightRequest="200"/>
+            <StackLayout Padding="10">
+                <Entry Placeholder="Nombre de Usuario" 
+                       PlaceholderColor="White"
+                       HorizontalTextAlignment="Center"
+                       x:Name="user"/>
+                <Entry Placeholder="Contraseña" 
+                       PlaceholderColor="White"
+                       IsPassword="true"
+                       HorizontalTextAlignment="Center"
+                       x:Name="password"/>
+                <Label  Text   = ""  
+                           TextColor="#71d349"/>
+
+                <Label TextColor="Black" x:Name = "nombre" HorizontalOptions="Center" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Padding="10">
+                <Button Text="Ingresar"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        BackgroundColor="#00467C"
+                        BorderRadius="30"
+                        WidthRequest="200"
+                        x:Name="BtnCallWS"
+                        Clicked="BtnCallWS_Click" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="20" HorizontalOptions="Center" HeightRequest="45">
+                <Button Image ="fblogo1.png"
+                        BackgroundColor="#fff100"
+                        TextColor="White"
+                        BorderRadius="20"/>
+                <Button Image="twlogo1.png"
+                        BackgroundColor="#fff100"
+                        TextColor="White"
+                        BorderRadius="20"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+   <!-- 
+    <StackLayout Orientation="Vertical">
+        <Button x:Name="BtnCallWS" Text="Call Web Service" 
+                    Clicked="BtnCallWS_Click" 
+                    BackgroundColor="#71d349" 
+                    TextColor="White" 
+                    BorderRadius="20"/>
+
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="2" Color="Silver"/>
+        <Label  Text   = "ID:"  
+                           TextColor="#71d349"/>
+        
+        <Label  x:Name = "nombre"/>
+
+       
+    </StackLayout>
+-->
+</ContentPage>

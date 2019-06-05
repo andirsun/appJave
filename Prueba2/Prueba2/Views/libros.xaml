@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba2.Views.libros"
+             BackgroundColor="#00467C"
+             Title="Mis Libros">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Text="Nombre Libro" Grid.Column="1" Grid.Row="1" BackgroundColor="#fff100"/>
+                <Button Text="Multa"  Grid.Column="1" Grid.Row="2" BackgroundColor="#fff100" />
+                <Button x:Name="NombreLibro" Text="No Tiene libros"  Grid.Column="2" Grid.Row="1" BackgroundColor="#fff100"/>
+                <Button x:Name="multa" Text="0"  Grid.Column="2" Grid.Row="2" BackgroundColor="#fff100"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

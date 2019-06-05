@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba2.Views.Options"
+             BackgroundColor="#00467C"
+             Title="Menú">
+    <StackLayout>
+        <Grid Padding="10">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+            <Button Text="Horarios"
+                            Grid.Column="0" 
+                            Grid.Row="0" 
+                            BackgroundColor="White" 
+                            BorderRadius="20"
+                            Image="horario.jpeg"
+                            ContentLayout="top,5"
+                            Clicked="Button_Clicked"/>
+            <Button Text="Cursos" 
+                            Grid.Column="1" 
+                            Grid.Row="0" 
+                            BackgroundColor="White" 
+                            BorderRadius="20"
+                            Image="cursos1.png"
+                            ContentLayout="top,5"/>
+            <Button Text="Citas" 
+                            Grid.Column="2" 
+                            Grid.Row="0" 
+                            BackgroundColor="White" 
+                            BorderRadius="20"
+                            Image="citas.png"
+                            ContentLayout="top,5"/>
+        </Grid>
+        <Grid Padding="20" ColumnSpacing="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+            <Button Text="Biblioteca" 
+                            Grid.Column="0" 
+                            Grid.Row="0" 
+                            BackgroundColor="White" 
+                            BorderRadius="20"
+                            Image="biblioteca.png"
+                            ContentLayout="top,5"
+                            Clicked="Button_Clicked_2"/>
+            <Button Text="Dispensador" 
+                            Grid.Column="1" 
+                            Grid.Row="0" 
+                            BackgroundColor="White" 
+                            BorderRadius="20"
+                            Image="dispensador1.png"
+                            ContentLayout="top,5"/>
+        </Grid>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" HeightRequest="50" VerticalOptions="EndAndExpand" Padding="20">
+            <Button Image ="inicio.png"
+                          BackgroundColor="#fff100"
+                          TextColor="White"
+                          BorderRadius="20"/>
+            <Button Image="anuncios.png"
+                          BackgroundColor="#fff100"
+                          TextColor="White"
+                          BorderRadius="20"/>
+            <Button Image="usuario.png"
+                          BackgroundColor="#fff100"
+                          TextColor="White"
+                          BorderRadius="20"
+                    Clicked="Button_Clicked_1"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

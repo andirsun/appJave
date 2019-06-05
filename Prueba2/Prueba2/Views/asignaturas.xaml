@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba2.Views.asignaturas"
+             Title="Asignaturas">
+    <StackLayout>
+   <!--
+        <StackLayout>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button x:Name="lb1Materia" Text="MiMateria" HorizontalOptions="Center" CornerRadius="20" TextColor="White" BackgroundColor="#00467C"></Button>
+            </Grid>
+            <Grid BackgroundColor="#fff100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button  Text="Grupo: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button  Text="Codigo Asignatura: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button  Text="Nota: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button x:Name="lb2Materia1" Text="MiMateria" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button x:Name="lb3Materia1" Text="MiMateria" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button x:Name="lb4Materia1" Text="MiMateria" HorizontalOptions="Center" Grid.Column="2" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+            </Grid>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button x:Name="lb1Horario" Text="Horario" HorizontalOptions="Center" CornerRadius="20" TextColor="White" BackgroundColor="#00467C"></Button>
+            </Grid>
+
+                <Grid BackgroundColor="#fff100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button  Text="Profesor: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button  Text="Hora: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button  Text="Dia: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button x:Name="lb2Horario" Text="miHorario" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button x:Name="lb3Horario" Text="miHorario" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                <Button x:Name="lb4Horario" Text="miHorario" HorizontalOptions="Center" Grid.Column="2" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+            </Grid>
+        </StackLayout>
+        <Label x:Name="errorLog"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Button Text="Obtener Materias "
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                TextColor="White"
+                BackgroundColor="#00467C"
+                BorderRadius="30"
+                WidthRequest="200"
+                x:Name="BtnCallWS"
+                Clicked="BtnCallWS_Click"/>
+        -->
+
+        <ListView ItemsSource="{Binding Mmaterias}"
+                  Header="Mis Materias" 
+                  Footer="fin Materias"
+                  HorizontalOptions="Center"
+                  RowHeight="225"
+                  ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Button x:Name="lb1Materia" Text="{Binding Nombre}" HorizontalOptions="Center" CornerRadius="20" TextColor="White" BackgroundColor="#00467C"></Button>
+                            </Grid>
+                            <Grid BackgroundColor="#fff100">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Button  Text="Grupo: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button  Text="Codigo Asignatura: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button  Text="Nota: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button x:Name="lb2Materia1" Text="{Binding Clase_section}" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button x:Name="lb3Materia1" Text="{Binding CodAsignatura}" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button x:Name="lb4Materia1" Text="{Binding NotaPonderada}" HorizontalOptions="Center" Grid.Column="2" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                            </Grid>
+                            <!--
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Button x:Name="lb1Horario" Text="Horario" HorizontalOptions="Center" CornerRadius="20" TextColor="White" BackgroundColor="#00467C"></Button>
+                            </Grid>
+
+                            <Grid BackgroundColor="#fff100">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Button  Text="Profesor: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button  Text="Hora: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button  Text="Dia: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button x:Name="lb2Horario" Text="{Binding Mmaterias.Horariom.Docente }" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button x:Name="lb3Horario" Text="{Binding Mmaterias.Horariom.HoraH }" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                <Button x:Name="lb4Horario" Text="{Binding Mmaterias.Horarim.DiaH }" HorizontalOptions="Center" Grid.Column="2" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                            </Grid>
+                            -->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

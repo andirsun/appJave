@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba2.Views.horario">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding MiHorario}"
+                  Header="Mis Materias" 
+                  Footer="fin Materias"
+                  HorizontalOptions="Center"
+                  RowHeight="225">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Button x:Name="lb1Horario" Text="Horario" HorizontalOptions="Center" CornerRadius="20" TextColor="White" BackgroundColor="#00467C"></Button>
+                            </Grid>
+
+                                <Grid BackgroundColor="#fff100">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Button  Text="Profesor: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                    <Button  Text="Hora: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                    <Button  Text="Dia: " HorizontalOptions="Center" Grid.Column="1" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                    <Button x:Name="lb2Horario" Text="{Binding Docente }" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                    <Button x:Name="lb3Horario" Text="{Binding HoraH }" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                    <Button x:Name="lb4Horario" Text="{Binding DiaH }" HorizontalOptions="Center" Grid.Column="2" Grid.Row="3" CornerRadius="20" BackgroundColor="#00467C" TextColor="White"></Button>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

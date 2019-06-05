@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba2.Views.Profile"
+             BackgroundColor="#00467C"
+             Title="Perfil">
+    <StackLayout>
+        <Image Source="userProfileR.png" Aspect="AspectFit"></Image>
+        <Button Text="Usuario-Estudiante" BackgroundColor="#FFF100"></Button>
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="lbNombre" FontSize="Small" Grid.Column="2" Grid.Row="1"  CornerRadius="20" BackgroundColor="#FFF100" ></Button>
+            <Button x:Name="lbapellidos" FontSize="Small" Grid.Column="2" Grid.Row="2" CornerRadius="20" BackgroundColor="#FFF100" ></Button>
+            <Button x:Name="lbIdestudiante" FontSize="Small" Grid.Column="2" Grid.Row="3" CornerRadius="20" BackgroundColor="#FFF100"></Button>
+            <Button x:Name="lbActivo" FontSize="Small" Grid.Column="2" Grid.Row="4" CornerRadius="20" BackgroundColor="#FFF100"></Button>
+            <Button Text="Nombre" FontSize="Small" Grid.Column="1" Grid.Row="1" CornerRadius="20" BackgroundColor="#FFF100"></Button>
+            <Button Text="Apellidos"  FontSize="Small" Grid.Column="1" Grid.Row="2" CornerRadius="20" BackgroundColor="#FFF100"></Button>
+            <Button Text="Id"  FontSize="Small" Grid.Column="1" Grid.Row="3" CornerRadius="20" BackgroundColor="#FFF100"></Button>
+            <Button Text="E-mail" FontSize="Small" Grid.Column="1" Grid.Row="4" CornerRadius="20" BackgroundColor="#FFF100"></Button>
+        </Grid>
+        <Button Text="Cerrar Sesion" BackgroundColor="#FFF100" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+</ContentPage>
